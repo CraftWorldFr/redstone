@@ -10,7 +10,7 @@ It can also generate code for several things like commands, listeners, custom ev
 
 ## Installation
 
-To install this tool you need [Node.js](https://nodejs.org/) version 4 minimum.
+To install this tool you need [Node.js](https://nodejs.org/) version `4.2.3` minimum.
 
 Then you can run:
 
