@@ -1,6 +1,7 @@
 # Redstone - A Spigot plugins manager
 
-[![NPM Version](http://img.shields.io/npm/v/spigot-redstone.svg?style=flat)](https://www.npmjs.org/package/spigot-redstone)
+[![NPM Version](npm-image)](npm-url)
+[![Build Status][travis-image]][travis-url]
 
 ![Demo](docs/demo.png)
 
@@ -133,3 +134,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[npm-image]: http://img.shields.io/npm/v/spigot-redstone.svg?style=flat
+[npm-url]: https://www.npmjs.org/package/spigot-redstone
+
+[travis-url]: https://travis-ci.org/CraftWorldFr/redstone
+[travis-image]: https://img.shields.io/travis/CraftWorldFr/redstone.svg
