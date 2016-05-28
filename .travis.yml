@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js:
+    - "4.2.3"
+    - "5.3.0"
+    - "6.2.0"
+    - "stable"
+git:
+    depth: 1
+notifications:
+    email: false
