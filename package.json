@@ -1,0 +1,36 @@
+{
+  "name": "spigot-redstone",
+  "version": "0.1.0",
+  "description": "Redstone: A Spigot plugin generator.",
+  "main": "index.js",
+  "bin": {
+    "redstone": "bin/cli"
+  },
+  "keywords": [
+    "cli",
+    "spigot",
+    "bukkit",
+    "craftbukkit",
+    "minecraft",
+    "redstone"
+  ],
+  "author": "Nathan Boiron",
+  "license": "MIT",
+  "dependencies": {
+    "change-case": "^2.3.1",
+    "colors": "^1.1.2",
+    "commander-extra": "^0.2.0",
+    "fs-extra": "^0.30.0",
+    "inquirer": "^1.0.2",
+    "node-dir": "^0.1.12",
+    "nodegit": "^0.13.0",
+    "request": "^2.44.0",
+    "then-request": "^2.2.0",
+    "winston": "^2.2.0",
+    "xml2js": "^0.4.16",
+    "xmldoc": "^0.5.1",
+    "yamljs": "^0.2.7"
+  },
+  "preferGlobal": true,
+  "engine": "node >= 4.2.3"
+}
