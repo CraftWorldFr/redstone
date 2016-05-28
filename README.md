@@ -1,5 +1,7 @@
 # Redstone - A Spigot plugins manager
 
+[![NPM Version](http://img.shields.io/npm/v/spigot-redstone.svg?style=flat)](https://www.npmjs.org/package/spigot-redstone)
+
 ![Demo](docs/demo.png)
 
 This tool can generate the boilerplate code for your next Spigot plugin.
