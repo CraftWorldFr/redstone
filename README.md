@@ -1,6 +1,6 @@
 # Redstone - A Spigot plugins manager
 
-[![NPM Version](npm-image)](npm-url)
+[![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 
 ![Demo](docs/demo.png)
