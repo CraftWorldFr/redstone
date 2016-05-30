@@ -28,6 +28,11 @@ module.exports = function makeEvent(program) {
 
             generator.make('event.java', data, outputFile);
 
-            program.log.i('Event [' + name + '] created in [' + outputFile + ']'.green);
+            program.log.i('Event [' + name.green + '] created in [' + outputFile.green + ']');
+            program.log.i();
+            program.log.i('To trigger your custom event, you have to do:');
+            program.log.i();
+            program.log.i('  Bukkit.getServer().getPluginManager().callEvent(new ' + name + '(/* args */));');
+            program.log.i();
         });
 };
