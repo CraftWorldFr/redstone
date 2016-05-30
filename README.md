@@ -56,10 +56,10 @@ Don't add `/` to the command, the tool will do it for you.
 $ redstone make:command <command>
 ```
 
-This will create a class to handle the command and add it to `plugin.yml`.
+This will create a class to handle the command and add it to `plugin.yml`.
 
 You will have to add a line in your `onEnable` method to register the command, but the
-tool will give you the line to add.
+tool will give you the line to add.
 
 #### Generate an event listener
 
