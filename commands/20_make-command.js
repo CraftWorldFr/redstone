@@ -64,7 +64,7 @@ module.exports = function makeCommand(program) {
                 program.log.i();
                 program.log.i('You just have to add this line in the onEnable method in ' + currentPlugin.getMainClass().green + '.java'.green + ':');
                 program.log.i();
-                program.log.i(`getCommand("${cmd}").setExecutor(new ${cmdClass}());`.green);
+                program.log.i(`  getCommand("${cmd}").setExecutor(new ${cmdClass}());`);
             });
         });
 };

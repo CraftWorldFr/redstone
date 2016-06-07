@@ -60,6 +60,10 @@ module.exports = function makeListener(program) {
                 generator.make('listener.java', data, outputFile);
 
                 program.log.i('Listener [' + name.green + '] created in [' + outputFile.green + ']');
+                program.log.i();
+                program.log.i('You just have to register it in the onEnable method in ' + currentPlugin.getMainClass().green + '.java'.green + ':');
+                program.log.i();
+                program.log.i(`  getServer().getPluginManager().registerEvents(new ${name}(), this);`);
             }); // prompt
         }); // action
 };
