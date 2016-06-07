@@ -23,6 +23,8 @@ module.exports = function pluginNew(program) {
                 process.exit();
             }
 
+            program.log.i('Creating a plugin in ' + path.join(process.cwd(), name).green);
+
             var data = {};
 
             program.log.d('Getting Spigot version infos...');
@@ -78,9 +80,7 @@ module.exports = function pluginNew(program) {
                     program.config.set('author.website', data.website);
 
                     program.log.i();
-                    program.log.i('Downloading plugin template...');
-
-                    program.log.d('Downloading from ' + templateUrl);
+                    program.log.i('Downloading plugin template from ' + templateUrl);
 
                     return Git.Clone(templateUrl, name);
                 }).then(function(repository) {
@@ -161,11 +161,15 @@ module.exports = function pluginNew(program) {
                         generator.make('new-plugin-readme.md', data, path.join(name, 'README.md'));
 
                         program.log.i();
-                        program.log.i('All done!'.green);
+                        program.log.i('== Your new plugin is ready! =='.green);
+                        program.log.i();
+                        program.log.i('Make sure to cd into you new plugin directory using code generators:');
+                        program.log.i('  cd ' + name);
                         program.log.i();
 
-                        program.log.i('Open the README.md file for help on importing and creating a jar.');
+                        program.log.i('Open the README.md file for help on importing the project into you IDE and how to create a jar.');
                         program.log.i();
+                        program.log.i('For extra help and issues see ' + 'https://github.com/CraftWorldFr/redstone'.green);
                     });
                 }); // prompt
 
@@ -177,8 +181,8 @@ module.exports = function pluginNew(program) {
             console.log('  To avoid having to specify your name and website every');
             console.log('  time you create a new plugin, you can save them with:');
             console.log();
-            console.log('    config author.name "Your Name"');
-            console.log('    config author.website "http://example.com"');
+            console.log('    $ redstone config author.name "Your Name"');
+            console.log('    $ redstone config author.website "http://example.com"');
             console.log();
         });
 
