@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var chalk = require('chalk');
 var fse = require('fs-extra');
 var Plugin = require('../lib/plugin');
 var CodeGenerator = require('../lib/generator');
@@ -28,7 +29,7 @@ module.exports = function makeEvent(program) {
 
             generator.make('event.java', data, outputFile);
 
-            program.log.i('Event [' + name.green + '] created in [' + outputFile.green + ']');
+            program.log.i('Event [' + chalk.green(name) + '] created in [' + chalk.green(outputFile) + ']');
             program.log.i();
             program.log.i('To trigger your custom event, you have to do:');
             program.log.i();

@@ -1,3 +1,4 @@
+var chalk = require('chalk');
 var Spigot = require('../lib/spigot');
 
 module.exports = function spigotCommand(program) {
@@ -14,7 +15,7 @@ module.exports = function spigotCommand(program) {
 
                 for (var i = 0; i < versions.length; i++) {
                     if (versions[i] == last) {
-                        program.log.i(versions[i].green + '    <-- last stable'.green);
+                        program.log.s(versions[i] + '    <-- last stable version');
                     } else {
                         program.log.i(versions[i] + '');
                     }

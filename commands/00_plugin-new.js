@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var chalk = require('chalk');
 var Git = require('nodegit');
 var dir = require('node-dir');
 var fse = require('fs-extra');
@@ -23,7 +24,7 @@ module.exports = function pluginNew(program) {
                 process.exit();
             }
 
-            program.log.i('Creating a plugin in ' + path.join(process.cwd(), name).green);
+            program.log.s('Creating a plugin in ' + path.join(process.cwd(), name));
 
             var data = {};
 
@@ -161,7 +162,7 @@ module.exports = function pluginNew(program) {
                         generator.make('new-plugin-readme.md', data, path.join(name, 'README.md'));
 
                         program.log.i();
-                        program.log.i('== Your new plugin is ready! =='.green);
+                        program.log.s('== Your new plugin is ready! ==');
                         program.log.i();
                         program.log.i('Make sure to cd into you new plugin directory using code generators:');
                         program.log.i('  cd ' + name);
@@ -169,7 +170,7 @@ module.exports = function pluginNew(program) {
 
                         program.log.i('Open the README.md file for help on importing the project into you IDE and how to create a jar.');
                         program.log.i();
-                        program.log.i('For extra help and issues see ' + 'https://github.com/CraftWorldFr/redstone'.green);
+                        program.log.i('For extra help and issues see ' + chalk.green('https://github.com/CraftWorldFr/redstone'));
                     });
                 }); // prompt
 

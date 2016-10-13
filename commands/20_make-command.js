@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var chalk = require('chalk');
 var fse = require('fs-extra');
 var inquirer = require('inquirer');
 var Plugin = require('../lib/plugin');
@@ -60,9 +61,9 @@ module.exports = function makeCommand(program) {
 
                 currentPlugin.setYml(pluginYml);
 
-                program.log.i('Command [' + '/'.green + cmd.green + '] created in [' + outputFile.green + ']');
+                program.log.i('Command [' + chalk.green('/' + cmd) + '] created in [' + chalk.green(outputFile) + ']');
                 program.log.i();
-                program.log.i('You just have to add this line in the onEnable method in ' + currentPlugin.getMainClass().green + '.java'.green + ':');
+                program.log.i('You just have to add this line in the onEnable method in ' + chalk.green(currentPlugin.getMainClass() + '.java') + ':');
                 program.log.i();
                 program.log.i(`  getCommand("${cmd}").setExecutor(new ${cmdClass}());`);
             });

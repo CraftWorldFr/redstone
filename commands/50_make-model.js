@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var chalk = require('chalk');
 var fse = require('fs-extra');
 var inquirer = require('inquirer');
 var Plugin = require('../lib/plugin');
@@ -35,7 +36,7 @@ module.exports = function makeModel(program) {
 
                 generator.make('model.java', data, outputFile);
 
-                program.log.i('Model [' + name.green + '] created in [' + outputFile.green + ']');
+                program.log.i('Model [' + chalk.green(name) + '] created in [' + chalk.green(outputFile) + ']');
             });
         });
 };

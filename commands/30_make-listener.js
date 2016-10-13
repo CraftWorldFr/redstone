@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var chalk = require('chalk');
 var fse = require('fs-extra');
 var inquirer = require('inquirer');
 var Plugin = require('../lib/plugin');
@@ -59,9 +60,9 @@ module.exports = function makeListener(program) {
 
                 generator.make('listener.java', data, outputFile);
 
-                program.log.i('Listener [' + name.green + '] created in [' + outputFile.green + ']');
+                program.log.i('Listener [' + chalk.green(name) + '] created in [' + chalk.green(outputFile) + ']');
                 program.log.i();
-                program.log.i('You just have to register it in the onEnable method in ' + currentPlugin.getMainClass().green + '.java'.green + ':');
+                program.log.i('You just have to register it in the onEnable method in ' + chalk.green(currentPlugin.getMainClass() + '.java') + ':');
                 program.log.i();
                 program.log.i(`  getServer().getPluginManager().registerEvents(new ${name}(), this);`);
             }); // prompt
